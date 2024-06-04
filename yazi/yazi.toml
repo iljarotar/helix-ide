@@ -1,0 +1,8 @@
+[manager]
+ratio = [ 0, 1, 0 ]
+show_hidden = true
+
+[opener]
+edit = [
+  { run = 'zellij run -c -n helix -- hx $1', block = true },
+]

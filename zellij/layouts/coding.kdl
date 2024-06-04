@@ -1,0 +1,27 @@
+layout {
+    pane size=1 borderless=true {
+       plugin location="zellij:tab-bar"
+    }
+    pane split_direction="vertical" {
+        pane {
+            size "30%"
+            pane {
+                command "yazi"
+                size "33%"
+            }
+            pane {
+                command "lazygit"
+            }
+        }
+        pane  {
+            name "helix"
+            command "hx"
+            args "."
+            close_on_exit true
+            focus true
+        }
+    }
+    pane size=1 borderless=true {
+       plugin location="zellij:status-bar"
+    }
+}
