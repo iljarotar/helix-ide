@@ -22,11 +22,17 @@ C-s = ":w"
 C-a = ":wa"
 C-r = ":reload-all"
 C-q = ":q"
+C-y = ":clipboard-yank"
+C-v = ":clipboard-paste-after"
+C-V = ":clipboard-paste-before"
 
 [keys.insert]
 C-s = ":w"
 C-a = ":wa"
 C-r = ":reload-all"
+C-y = ":clipboard-yank"
+C-v = ":clipboard-paste-after"
+C-V = ":clipboard-paste-before"
 
 [editor.soft-wrap]
 enable = true
