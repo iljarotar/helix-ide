@@ -1,8 +1,14 @@
 [manager]
-ratio = [ 0, 1, 0 ]
+ratio = [ 0, 1, 1 ]
 show_hidden = true
 
 [opener]
 edit = [
-  { run = 'zellij run -c -n helix -- hx $1', block = true },
+  # uncomment the line you prefer
+
+  # Opens helix in a new pane
+  # { run = 'zellij run -c -n helix -- hx $1', desc = "Open in new pane" },
+
+  # Opens helix in a new pane and closes the existing -> make sure to have at least one pane open on the right before opening a file like this
+  { run = 'zellij action move-focus right && zellij action close-pane && zellij run -c -n helix -- hx $1', desc = "Open in existing pane" }
 ]
