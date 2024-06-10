@@ -1,22 +1,18 @@
-#########################################################################################
-# Copied from https://github.com/helix-editor/helix/issues/3231#issuecomment-1876996743
-#########################################################################################
-
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
 
 [language-server.eslint]
-args = ["--stdio"]                        # should come by def with helix
+args = ["--stdio"]
 command = "vscode-eslint-language-server"
 
 [language-server.eslint.config]
-validate = "on"                            # I assume this enabled eslit to validate the file, which now shows me counts for errors, warnings, etc in helix
-experimental = { useFlatConfig = false }   # not sure why this is here
+validate = "on"
+experimental = { useFlatConfig = false }
 rulesCustomizations = []
 run = "onType"
 problems = { shortenToSingleLine = false }
-nodePath = ""                              # seems redundant, why do we need to override this, should get detected autom.
+nodePath = ""
 
 [language-server.eslint.config.codeAction]
 [language-server.eslint.config.codeAction.disableRuleComment]
@@ -24,17 +20,17 @@ enable = true
 location = "separateLine"
 
 [language-server.eslint.config.codeAction.showDocumentation]
-enable = true # why?
+enable = true
 
 [language-server.eslint.config.codeActionOnSave]
 enable = true
 mode = "fixAll"
 
 [language-server.eslint.config.workingDirectory]
-mode = "location" # do we need to override this?
+mode = "location"
 
 [language-server.typescript-language-server.config]
-documentFormatting = false # use eslint instead, do we have to override this ourselves? I think if eslint LSP is detected and enabled, this should be done automatically for us as generally everyone lets eslint take over linting+prettying, which uses prettier by default if detected by it
+documentFormatting = false
 
 [language-server.gopls]
 command = "gopls"
@@ -48,12 +44,12 @@ language-servers = [
   ], name = "typescript-language-server" },
   "eslint",
   "emmet-lsp",
-] # shouldn't need to override this
+]
 roots = [
   "package-lock.json",
   "tsconfig.json",
   ".prettierrc.json",
-] # shouldn't need to override this
+]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -66,16 +62,14 @@ language-servers = [
   "eslint",
   "tailwindcss-ls",
   "emmet-lsp",
-] # shouldn't need to override this
+]
 roots = [
   "package-lock.json",
   "tsconfig.json",
   ".prettierrc.json",
-] # shouldn't need to override this!
+]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
-
-#########################################################################################
 
 [[language]]
 name = "markdown"
