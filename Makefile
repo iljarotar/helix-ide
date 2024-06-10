@@ -4,3 +4,5 @@ copy-from-local:
 	cp ~/.config/lazygit/config.yml lazygit
 	cp ~/.config/yazi/*.toml yazi
 	cp -r ~/.config/zellij/* zellij
+	cp ~/bin/yazi-open-helix scripts
+	cp ~/bin/dev scripts

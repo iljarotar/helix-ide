@@ -1,0 +1,13 @@
+#!/bin/bash
+
+zellij action move-focus right
+zellij action close-pane
+zellij run -n helix -d right -- hx $1
+zellij action move-focus left
+
+for i in {1..3}
+do
+	zellij action resize -
+done
+
+zellij action move-focus right
