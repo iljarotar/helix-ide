@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zellij run -c -n helix -d right -- hx .
+zellij run -c -n $(pwd) -d right -- hx .
 zellij run -d right -- lazygit
 zellij action move-focus left
 zellij action move-focus left
