@@ -2,7 +2,7 @@
 
 zellij action move-focus right
 zellij action close-pane
-zellij run -n $1 -d right -- hx $1
+zellij run -n helix -d right -- hx $1
 zellij action move-focus left
 
 for i in {1..3}
