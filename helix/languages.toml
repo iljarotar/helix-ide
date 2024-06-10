@@ -1,3 +1,8 @@
+[language-server.jinja-lsp]
+command = "jinja-lsp"
+config = { templates = "./templates", backend = ["./src"], lang = "rust"}
+timeout = 5
+
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
@@ -106,3 +111,11 @@ auto-format = true
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls", "emmet-lsp"]
 auto-format = true
+
+[[language]]
+name = "jinja"
+language-servers = ["jinja-lsp"]
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server", "jinja-lsp", "ansible-language-server"]
