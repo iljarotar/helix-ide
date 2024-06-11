@@ -1,8 +1,10 @@
 #!/bin/bash
 
+root=$(git rev-parse --show-toplevel)
+
 zellij action move-focus right
 zellij action close-pane
-zellij run -n helix -d right -- hx $1
+zellij run -n helix -d right -- hx $1 -w $root
 zellij action move-focus left
 
 for i in {1..3}
