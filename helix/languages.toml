@@ -81,7 +81,7 @@ name = "markdown"
 file-types = ["md", "MD"]
 formatter = { command = "deno", args = ["fmt", "-", "--ext", "md"] }
 language-servers = ["marksman", "emmet-lsp"]
-auto-format = false
+auto-format = true
 
 [[language]]
 name = "go"

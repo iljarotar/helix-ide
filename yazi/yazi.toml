@@ -6,3 +6,8 @@ show_hidden = true
 edit = [
   { run = "yazi-open-helix $1", desc = "Open file" }
 ]
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
