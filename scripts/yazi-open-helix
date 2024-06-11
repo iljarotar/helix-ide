@@ -1,15 +1,6 @@
 #!/bin/bash
 
-root=$(git rev-parse --show-toplevel)
-
 zellij action move-focus right
-zellij action close-pane
-zellij run -n helix -d right -- hx $1 -w $root
-zellij action move-focus left
-
-for i in {1..3}
-do
-	zellij action resize -
-done
-
-zellij action move-focus right
+zellij action write 27 # send <Escape> key
+zellij action write-chars ":open $1"
+zellij action write 13 # send <Enter> key
