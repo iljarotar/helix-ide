@@ -5,6 +5,8 @@ keybinds {
         // bind "Alt c" { Copy; }
         unbind "Ctrl q"
         unbind "Ctrl s"
+        unbind "Alt ["
+        unbind "Alt ]"
         unbind "Alt o"
         unbind "Alt i"
 
