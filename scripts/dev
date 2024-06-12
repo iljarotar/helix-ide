@@ -1,16 +1,16 @@
 #!/bin/bash
 
-pwd="$(eval pwd)"
-cwd="cd $pwd"
-
 exit="echo 'closing this pane will break the editor. close tab instead'"
 open="hx"
 
+pwd="$(eval pwd)"
+cwd="cd $pwd"
 alias_exit="alias exit=\"$exit\""
 alias_open="alias open=\"$open\""
 
 hx="$alias_exit && $alias_open && clear && hx ."
 lazygit="$alias_exit && clear && lazygit"
+term="$alias_exit && clear"
 yazi="$alias_exit && clear && yazi"
 
 zellij action new-pane -d right
@@ -35,5 +35,13 @@ do
 	zellij action resize -
 done
 
+zellij action new-pane -d down
+zellij action move-focus down
+zellij action write-chars "$cwd"
+zellij action write 13
+zellij action write-chars "$term"
+zellij action write 13
+
+zellij action move-focus up
 zellij action write-chars "$yazi"
 zellij action write 13
