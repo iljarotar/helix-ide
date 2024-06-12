@@ -1,0 +1,10 @@
+// Layout with only one mode, so "Alt+[]" does not change the order and layout of the panes
+layout {
+    pane size=1 borderless=true {
+       plugin location="zellij:tab-bar"
+    }
+    pane
+    pane size=1 borderless=true {
+       plugin location="zellij:status-bar"
+    }
+}
