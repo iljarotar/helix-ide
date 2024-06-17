@@ -9,6 +9,8 @@ keybinds {
         unbind "Alt ]"
         unbind "Alt o"
         unbind "Alt i"
+        unbind "Alt n"
+        unbind "Ctrl o"
 
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
