@@ -79,7 +79,7 @@ auto-format = true
 [[language]]
 name = "markdown"
 file-types = ["md", "MD"]
-formatter = { command = "deno", args = ["fmt", "-", "--ext", "md"] }
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
 language-servers = ["marksman", "emmet-lsp"]
 auto-format = true
 
