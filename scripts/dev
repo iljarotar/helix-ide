@@ -7,14 +7,14 @@ cwd="cd $pwd"
 alias_open="alias open=\"$open\""
 hx="$alias_open && clear && hx ."
 
-zellij action new-pane -d right
+zellij action new-pane -d right -n helix
 zellij action move-focus right
 zellij action write-chars "$cwd"
 zellij action write 13
 zellij action write-chars "$hx"
 zellij action write 13
 
-zellij action new-pane -d right
+zellij action new-pane -d right -n lazygit
 zellij action move-focus right
 zellij action write-chars "$cwd"
 zellij action write 13
@@ -29,7 +29,7 @@ do
 	zellij action resize -
 done
 
-zellij action new-pane -d down
+zellij action new-pane -d down -n $pwd
 zellij action move-focus down
 zellij action write-chars "$cwd"
 zellij action write 13
